@@ -22,7 +22,7 @@
     .hero-section h1 {
         font-size: 46px;
         font-weight: 700;
-        color: #2e2e2e;
+        color: #FF4D8D;
         padding: 10px 25px;
         border-radius: 10px;
     }
