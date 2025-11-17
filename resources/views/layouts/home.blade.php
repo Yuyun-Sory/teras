@@ -1,128 +1,328 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title') | Teras Bu Rini Catering Homemade</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Font Allison -->
-    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+@extends('layouts.main')
+@section('title', 'Home')
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
+@section('content')
+<style>
+/* === HERO SECTION === */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        /* Header Hijau */
-        .header-top {
-            background-color: #9ef7a1;
-            color: #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-        }
+/* === BACKGROUND === */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 
-        .brand-text {
-            font-weight: bold;
-            line-height: 1.2;
-        }
+.hero-bg::before,
+.hero-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
 
-        .brand-text small {
-            font-weight: normal;
-            font-size: 14px;
-        }
+.hero-bg::before {
+    left: 0;
+    background-image: url('{{ asset('images/produk1.jpg') }}');
+    clip-path: path("M0,0 L85%,0 C87%,40% 88%,60% 85%,100% L0,100% Z");
+}
 
-        .btn-auth {
-            color: #000;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 500;
-        }
+.hero-bg::after {
+    right: 0;
+    background-image: url('{{ asset('images/produk2.jpg') }}');
+    clip-path: path("M15%,0 C18%,40% 17%,60% 15%,100% L100%,100% L100%,0 Z");
+}
 
-        /* Navbar */
-        .nav-bar {
-            background-color: #fff;
-            padding: 10px 50px;
-            display: flex;
-            justify-content: flex-start; /* pindah ke kiri */
-            align-items: center;
-            border-bottom: 2px solid #9ef7a1;
-            gap: 30px;
-        }
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.25);
+    z-index: 2;
+}
+ 
+.hero-inner {
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .nav-links a {
-            color: #000;
-            text-decoration: none;
-            margin-right: 25px;
-            font-weight: 500;
-        }
+/* === GAMBAR BULAT (SEBELAH KIRI TENGAH) === */
+.collage {
+    position: absolute;
+    left: 20%;
+    /* pindah ke kiri */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
-        .nav-links a:hover {
-            color: #46d66a;
-        }
+.collage .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 6px solid #fff;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
 
-        .welcome-banner h1 {
-            font-family: 'Allison', cursive;
-            font-size: 64px;
-            font-weight: 400;
-            margin: 0;
-            color: #2f2f2f;
-            line-height: 1.2;
-        }
+/* posisi tumpukan */
+.circle.one {
+    width: 120px;
+    height: 120px;
+    left: 20px;
+    top: 60px;
+    z-index: 1;
+}
 
-        .welcome-banner span {
-            display: block;
-            font-size: 36px;
-            font-family: 'Allison', cursive;
-        }
+.circle.two {
+    width: 160px;
+    height: 160px;
+    left: 70px;
+    top: 30px;
+    z-index: 2;
+}
 
-        footer {
-            background-color: #f8f8f8;
-            padding: 20px;
+.circle.three {
+    width: 200px;
+    height: 200px;
+    left: 130px;
+    top: 0;
+    z-index: 3;
+}
+
+/* === TEKS === */
+.hero-text {
+    width: 45%;
+    text-align: left;
+    color: #1a1a1a;
+    margin-left: auto;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+.hero-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2f7f3a;
+    margin-bottom: 14px;
+}
+
+.hero-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    max-width: 420px;
+}
+.welcome-banner {
+            background-color: #f2f2f2;
             text-align: center;
-            margin-top: 40px;
+            padding: 60px 20px;
+            margin: 0;
         }
-    </style>
-</head>
-<body>
 
-    <!-- Header Hijau -->
-    <div class="header-top">
-        <div class="d-flex align-items-center gap-3">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" width="60" height="60">
-            <div class="brand-text">
-                Teras Bu Rini<br>
-                <small>Catering Homemade</small>
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .collage {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .collage .circle {
+        position: relative;
+        margin: 10px;
+    }
+}
+</style>
+<section class="welcome-banner">
+        <h1>Selamat Datang di</h1>
+        <span>Catering Teras Bu Rini</span>
+    </section>
+
+<!-- === HERO SECTION === -->
+<section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        {{-- Gambar bulat bertumpuk di kiri tengah --}}
+        <div class="collage">
+            <div class="circle one" style="background-image: url('{{ asset('images/Produk3.png') }}');"></div>
+            <div class="circle two" style="background-image: url('{{ asset('images/Produk4.png') }}');"></div>
+            <div class="circle three" style="background-image: url('{{ asset('images/Produk5.png') }}');"></div>
+        </div>
+
+        {{-- Teks di kanan --}}
+        <div class="hero-text">
+            <h1>Teras Bu Rini</h1>
+            <h2>Catering Homemade</h2>
+            <p>
+                Nikmati kelezatan makanan homemade berkualitas tinggi dari dapur kami di Turi. Setiap hidangan dibuat
+                dengan cinta dan bahan-bahan segar pilihan untuk acara spesial Anda.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Section Citarasa Prima -->
+<section class="text-center py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <h2 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #333;">
+            CITARASA PRIMA, KUALITAS UTAMA
+        </h2>
+        <p class="mt-3"
+            style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #555; line-height: 1.8;">
+            Teras Bu Rini melayani jasa boga berkualitas dan bercitarasa prima dengan tampilan yang lebih eksklusif dan
+            lebih terpercaya dalam memberikan jamuan bagi tamu-tamu penting anda. Beragam menu masakan dan menjadikan
+            Teras Bu Rini sebagai jasa catering yang inovatif dengan lebih dari 200 koleksi menu lezat yang siap
+            dihidangkan.
+        </p>
+    </div>
+</section>
+
+<!-- ====== MENU POPULER ====== -->
+<section class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <h2
+            style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 30px; color: #000; text-align: left; margin-bottom: 30px;">
+            Menu Populer
+        </h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/Nasi ayam goreng.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Nasi Ayam Goreng Lalapan</h5>
+                <p>Rp 20.000</p>
+            </div>
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/soto ayam.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Soto Ayam</h5>
+                <p>Rp 15.000</p>
+            </div>
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/nasi pecal.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Nasi Pecel</h5>
+                <p>Rp 12.000</p>
             </div>
         </div>
-        <div>
-            <a href="#" class="btn-auth">Masuk</a>
-            <a href="#" class="btn-auth">Daftar</a>
+    </div>
+</section>
+
+<!-- ====== OLEH-OLEH POPULER ====== -->
+<section class="py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2
+            style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 30px; color: #000; text-align: left; margin-bottom: 30px;">
+            Oleh-Oleh Populer
+        </h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/Produk5.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Jahe Merah Instan</h5>
+                <p>Rp 15.000</p>
+            </div>
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/Produk4.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Bolu Kukus Pandan Keju</h5>
+                <p>Rp 30.000</p>
+            </div>
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/Telur asin.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Telur Asin</h5>
+                <p>Rp 15.000</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Navbar -->
-    <div class="nav-bar">
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/menu">Menu</a>
-            <a href="/cara-pesan">Cara Pesan</a>
-            <a href="/tentang">Tentang</a>
+<!-- ====== MINUMAN SEHAT ====== -->
+<section class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <h2
+            style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 30px; color: #000; text-align: left; margin-bottom: 30px;">
+            Minuman Sehat
+        </h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/wedang jahe merah.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Wedang Jahe Merah</h5>
+                <p>Rp 5.000</p>
+            </div>
+            <div style="width: 250px; text-align: center;">
+                <img src="{{ asset('images/wedang susu jahe.png') }}" style="width:100%; border-radius:10px;">
+                <h5 style="margin-top:10px;">Wedang Susu Jahe</h5>
+                <p>Rp 5.000</p>
+            </div>
         </div>
     </div>
+</section>
 
-    <!-- Konten Halaman -->
-    <div class="container-fluid p-0">
-        @yield('content')
-    </div>
+<!-- === BAGIAN LOKASI & FOOTER === -->
+<section class="py-5 px-4" style="background-color: #a8f5a2;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Kiri: Logo & Deskripsi -->
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h1 style="font-size: 70px; font-weight: bold;">T</h1>
+                <p style="max-width: 420px; font-size: 15px;">
+                    Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai
+                    kebutuhan konsumsi, mulai dari menu harian hingga acara seperti rapat, seminar, dan wedding. Kami
+                    menghadirkan hidangan lezat, bergizi, dan terjangkau dengan cita rasa terbaik untuk setiap momen
+                    Anda.
+                </p>
 
-    <footer>
-        &copy; {{ date('Y') }} Teras Bu Rini Catering Homemade — Semua hak dilindungi.
-    </footer>
+                <!-- Ikon Sosial Media (dengan tautan aktif) -->
+                <div class="mt-3 d-flex align-items-center">
+                    <a href="https://wa.me/6281234567890" target="_blank" class="me-3" title="WhatsApp">
+                        <img src="{{ asset('icons/wa.png') }}" width="30" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/terasburini" target="_blank" class="me-3" title="Instagram">
+                        <img src="{{ asset('icons/ig.png') }}" width="30" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/terasburini" target="_blank" title="Facebook">
+                        <img src="{{ asset('icons/fb.png') }}" width="30" alt="Facebook">
+                    </a>
+                </div>
+            </div>
 
-</body>
-</html>
+            <!-- Kanan: Lokasi & Map -->
+            <div class="col-md-6">
+                <h4 class="fw-bold">Lokasi</h4>
+                <p>📍 Garongan Kembang RT 02 RW 18 Wonokerto Turi Sleman 55551</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.583459911582!2d110.378!3d-7.678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDAnNDIuOCJTIDExMMKwMjInNDEuOCJF!5e0!3m2!1sen!2sid!4v1630000000000"
+                    width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen=""
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+@endsection

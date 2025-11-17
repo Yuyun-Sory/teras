@@ -161,33 +161,33 @@
 <section class="steps">
     <div class="step">
       <h2>1. Langkah Pertama – <span>Pemesanan Melalui Chatbot</span></h2>
-      <img src="img/langkah1.jpg" alt="Langkah Pertama Pemesanan Chatbot">
+      <img src="img/carapesan1.png" alt="Cara Pesan Pertama Pemesanan Chatbot">
     </div>
 
     <div class="step">
       <h2>2. Langkah Dua – <span>Pilih Menu Yang Diinginkan</span></h2>
-      <img src="img/langkah2.jpg" alt="Langkah Dua Pilih Menu">
+      <img src="img/carapesan2.png" alt="Cara Pesan Dua Pilih Menu">
     </div>
   </section>
   <!-- Langkah 3 -->
     <div class="step">
       <h2>3. Langkah Tiga – <span>Tentukan Jumlah & Tanggal</span></h2>
       <div class="step-images">
-        <img src="img/langkah3a.jpg" alt="Langkah Tiga Jumlah Tamu">
-        <img src="img/langkah3b.jpg" alt="Langkah Tiga Pilih Tanggal">
+        <img src="img/carapesan3.png" alt="Cara Pesan Tiga Jumlah Tamu">
+        <img src="img/carapesan32.png" alt="Cara Pesan Tiga Pilih Tanggal">
       </div>
     </div>
 
     <!-- Langkah 4 -->
     <div class="step">
       <h2>4. Langkah Empat – <span>Masukkan Data Pemesan</span></h2>
-      <img src="img/langkah4.jpg" alt="Langkah Empat Data Pemesan">
+      <img src="img/carapesan4.png" alt="Langkah Empat Data Pemesan">
     </div>
   </section>
   <!-- Langkah 5 -->
     <div class="step">
       <h2>5. Langkah Lima – <span>Konfirmasi Pesanan</span></h2>
-      <img src="img/langkah5.jpg" alt="Langkah Lima Konfirmasi Pesanan">
+      <img src="img/carapesan5.png" alt="Langkah Lima Konfirmasi Pesanan">
     </div>
   </section>
 </body>

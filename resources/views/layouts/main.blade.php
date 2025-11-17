@@ -93,7 +93,7 @@
     <!-- Header Hijau -->
     <div class="header-top">
         <div class="d-flex align-items-center gap-3">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" width="60" height="60">
+            <img src="{{ asset('images/BG teras.png') }}" alt="Logo" width="60" height="60">
             <div class="brand-text">
                 Teras Bu Rini<br>
                 <small>Catering Homemade</small>
