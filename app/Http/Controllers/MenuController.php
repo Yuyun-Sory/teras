@@ -76,6 +76,114 @@ class MenuController extends Controller
                 'deskripsi' => 'Hidangan khas Malang yang menggugah selera! Semangkuk bakwan kawi berisi tahu isi, bakso, siomay, dan pangsit goreng yang disiram kuah kaldu gurih hangat. Dilengkapi sambal dan kecap untuk cita rasa pedas manis yang pas. Setiap suapan menghadirkan perpaduan tekstur lembut dan renyah yang bikin nagih! Cocok disantap kapan pun, terutama saat cuaca dingin',
                 'gambar' => 'images/bakwan kawi.png'
             ],
+        'Teh' => [
+                'nama' => 'Teh',
+                'harga' => 6000,
+                'minimal' => 50,
+                'rating' => 4.5,
+                'deskripsi' => '🍵 Teh Hangat / Dingin Minuman sederhana yang selalu jadi favorit setiap waktu. Rasa manisnya pas, aromanya menenangkan, dan cocok banget buat nemenin makan siang atau sekadar ngobrol santai. Disajikan dalam dua pilihan ukuran:
+                🧊 200 ml — Rp 2.000
+                🧊 400 ml — Rp 4.000',
+                'gambar' => 'images/teh manis.png'
+            ],
+        'wedang-jahe-merah-susu' => [
+                'nama' => 'Wedang Jahe Merah Susu',
+                'harga' => 8000,
+                'minimal' => 50,
+                'rating' => 4.6,
+                'deskripsi' => 'Perpaduan hangatnya jahe merah dengan lembutnya susu menghasilkan cita rasa khas yang menenangkan tubuh dan pikiran. Cocok diminum saat cuaca dingin atau malam hari untuk menghangatkan badan dan menambah energi.',
+                'gambar' => 'images/wedang susu jahe.png'
+        ],
+        'kopi-hitam' => [
+                'nama' => 'Kopi Hitam',
+                'harga' => 5000,
+                'minimal' => 50,
+                'rating' => 4.4,
+                'deskripsi' => 'Kopi klasik dengan aroma kuat dan rasa pahit yang elegan — pilihan tepat bagi pencinta cita rasa autentik. Diseduh dari biji kopi pilihan, menghasilkan sensasi nikmat yang membangkitkan semangat di setiap tegukan. Cocok dinikmati pagi hari atau saat lembur malam.',
+                'gambar' => 'images/kopi hitam.png'
+        ],
+        'wedang-jahe-merah' => [
+                'nama' => 'Wedang Jahe Merah',
+                'harga' => 5000,
+                'minimal' => 50,
+                'rating' => 4.4,
+                'deskripsi' => 'Minuman hangat tradisional yang kaya manfaat. Terbuat dari jahe merah pilihan yang direbus hingga mengeluarkan aroma khas dan rasa pedas hangat yang menenangkan. Disajikan dengan sedikit gula aren untuk menambah cita rasa manis alami. Cocok diminum saat cuaca dingin atau untuk menghangatkan tubuh setelah beraktivitas seharian.',
+                'gambar' => 'images/wedang jahe merah.png'
+        ],
+        'tempe-mendoan' => [
+                'nama' => 'Tempe Mendoan',
+                'harga' => 5000,
+                'minimal' => 50,
+                'rating' => 3.0,
+                'deskripsi' => 'Camilan khas Jawa yang selalu menggugah selera! Irisan tempe tipis dilapisi adonan tepung berbumbu bawang dan daun bawang, lalu digoreng setengah matang hingga berwarna kuning keemasan. Hasilnya gurih, lembut, dan harum khas tempe yang baru digoreng. Paling nikmat disantap hangat-hangat dengan sambal kecap pedas atau cabai rawit segar.',
+                'gambar' => 'images/tempe mendoan.png'
+        ],
+        'bakwan' => [
+                'nama' => 'Bakwan',
+                'harga' => 2000,
+                'minimal' => 50,
+                'rating' => 3.0,
+                'deskripsi' => 'Camilan gorengan favorit yang selalu bikin kangen! Terbuat dari campuran sayuran segar seperti kol, wortel, dan daun bawang yang dibalut adonan tepung gurih, lalu digoreng hingga berwarna keemasan. Teksturnya renyah di luar, lembut di dalam. Nikmat disantap hangat-hangat, apalagi dengan cabai rawit atau saus sambal pedas manis.',
+                'gambar' => 'images/Bakwan.png'
+        ],
+        'bolu-kukus-pandan-original' => [
+                'nama' => 'Bolu Kukus Pandan Original',
+                'harga' => 25000,
+                'minimal' => 50,
+                'rating' => 5.0,
+                'deskripsi' => 'Bolu kukus lembut dengan aroma pandan yang harum dan rasa manis yang pas. Dibuat dari bahan pilihan dan dikukus sempurna hingga menghasilkan tekstur yang empuk dan mengembang cantik. Warna hijau alaminya menggoda selera, cocok dinikmati bersama teh atau kopi di waktu santai. Setiap gigitan menghadirkan rasa nostalgia kue rumahan yang klasik dan lembut di lidah.',
+                'gambar' => 'images/bolu kukus pandan.png'
+        ],
+        'bolu-kukus-pandan-keju' => [
+                'nama' => 'Bolu Kukus Pandan Keju',
+                'harga' => 30000,
+                'minimal' => 50,
+                'rating' => 5.0,
+                'deskripsi' => 'Nikmati perpaduan lembutnya bolu kukus pandan dengan gurihnya taburan keju melimpah di atasnya. Dibuat dari bahan berkualitas dengan aroma pandan alami yang harum dan tekstur lembut yang mengembang sempurna. Setiap potongnya menghadirkan rasa manis, gurih, dan wangi yang pas di lidah.  Cocok untuk camilan keluarga, oleh-oleh, atau sajian acara spesial',
+                'gambar' => 'images/bolu kukus pandan keju.png'
+        ],
+        'bolu-kukus-pandan-keju' => [
+                'nama' => 'Bolu Kukus Pandan Keju',
+                'harga' => 30000,
+                'minimal' => 50,
+                'rating' => 5.0,
+                'deskripsi' => 'Nikmati perpaduan lembutnya bolu kukus pandan dengan gurihnya taburan keju melimpah di atasnya. Dibuat dari bahan berkualitas dengan aroma pandan alami yang harum dan tekstur lembut yang mengembang sempurna. Setiap potongnya menghadirkan rasa manis, gurih, dan wangi yang pas di lidah.  Cocok untuk camilan keluarga, oleh-oleh, atau sajian acara spesial',
+                'gambar' => 'images/bolu kukus pandan keju.png'
+        ],
+        'bolu-kukus-pandan-keju 15 x 10 x 5 cm' => [
+                'nama' => 'Bolu Kukus Pandan Keju 15 x 10 x 5 cm',
+                'harga' => 30000,
+                'minimal' => 50,
+                'rating' => 3.0,
+                'deskripsi' => 'Bolu kukus lembut dengan aroma pandan alami yang harum, dipadukan dengan taburan keju gurih di atasnya. Teksturnya empuk dan mengembang sempurna, dengan rasa manis yang pas dan sentuhan keju yang bikin nagih. Dibuat dari bahan pilihan tanpa pengawet, cocok untuk camilan keluarga, bingkisan, atau teman minum teh sore hari.',
+                'gambar' => 'images/boluu kukus pandan keju.png'
+        ],
+        'jahe-merah' => [
+                'nama' => 'Jahe Merah Instan',
+                'harga' => 30000,
+                'minimal' => 50,
+                'rating' => 4.7,
+                'deskripsi' => 'Nikmati kehangatan alami dari jahe merah pilihan dalam bentuk instan yang praktis dan menyehatkan. Dibuat dari ekstrak jahe merah murni dengan campuran gula aren alami, menghasilkan rasa pedas hangat yang pas di tenggorokan dan menenangkan tubuh. Cocok diminum saat cuaca dingin, setelah beraktivitas, atau untuk menjaga daya tahan tubuh.',
+                'gambar' => 'images/Produk5.png'
+        ],
+        'telur-asin' => [
+                'nama' => 'Telur Asin',
+                'harga' => 3500,
+                'minimal' => 50,
+                'rating' => 4.3,
+                'deskripsi' => 'Telur asin pilihan dengan rasa gurih khas dan tekstur kuning telur yang lembut serta sedikit berminyak. Dibuat dari telur bebek segar yang diawet secara tradisional menggunakan garam pilihan, menghasilkan cita rasa yang pas — tidak terlalu asin dan tetap nikmat. Cocok dijadikan lauk pendamping nasi hangat, bubur, atau hidangan khas Indonesia lainnya.',
+                'gambar' => 'images/Telur asin.png'
+        ],
+        'bolu-kukus-pandan-original ukuran 15 x 10 x 5 cm' => [
+                'nama' => 'Bolu Kukus Pandan Original Rp Ukuran 15 x 10 x 5 cm',
+                'harga' => 25000,
+                'minimal' => 50,
+                'rating' => 4.0,
+                'deskripsi' => 'Bolu kukus lembut dengan aroma pandan alami yang khas dan rasa manis yang pas di lidah. Dibuat dari bahan pilihan tanpa pengawet, menghasilkan tekstur empuk, ringan, dan mengembang sempurna. Warna hijau pandannya menggoda selera, cocok untuk camilan keluarga, suguhan tamu, atau teman minum teh sore.',
+                'gambar' => 'images/bolu kukus original.png'
+        ],
+        
+        
         
         
         

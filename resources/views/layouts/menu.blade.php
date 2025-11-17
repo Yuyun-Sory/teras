@@ -266,7 +266,7 @@
             <div class="menu-info">
                 <h4>Teh Manis Dingin Rp 5.000</h4>
                 <p>Minimal Rp 5.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'Teh') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.6</span></div>
             </div>
         </div>
@@ -276,7 +276,7 @@
             <div class="menu-info">
                 <h4>Wedang Jahe Merah Susu Rp 8.000</h4>
                 <p>Minimal Rp 8.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'wedang-jahe-merah-susu') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.9</span></div>
             </div>
         </div>
@@ -284,9 +284,9 @@
         <div class="menu-card">
             <img src="{{ asset('images/kopi hitam.png') }}" alt="Kopi Hitam">
             <div class="menu-info">
-                <h4>Kopi Hitam Rp 7.000</h4>
-                <p>Minimal Rp 7.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <h4>Kopi Hitam Rp 5.000</h4>
+                <p>Minimal Rp 5.000</p>
+                <a href="{{ route('menu.detail', 'kopi-hitam') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>
@@ -296,7 +296,7 @@
             <div class="menu-info">
                 <h4>Wedang Jahe Merah Rp 9.000</h4>
                 <p>Minimal Rp 9.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'wedang-jahe-merah') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.8</span></div>
             </div>
         </div>
@@ -311,7 +311,7 @@
             <div class="menu-info">
                 <h4>Tempe Mendoan Rp 6.000</h4>
                 <p>Minimal Rp 6.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'tempe-mendoan') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.8</span></div>
             </div>
         </div>
@@ -321,7 +321,7 @@
             <div class="menu-info">
                 <h4>Bakwan Rp 5.000</h4>
                 <p>Minimal Rp 5.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'bakwan') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>
@@ -337,7 +337,7 @@
             <div class="menu-info">
                 <h4>Bolu Kukus Pandan Original Rp 25.000 Ukuran 22 x 10 x 5 cm</h4>
                 <p>Minimal Rp 15.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'bolu-kukus-pandan-original') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.8</span></div>
             </div>
         </div>
@@ -347,17 +347,17 @@
             <div class="menu-info">
                 <h4>Bolu Kukus Pandan Keju Rp 30.000 Ukuran 22 x 10 x 5 cm</h4>
                 <p>Minimal Rp 10.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'bolu-kukus-pandan-keju') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.6</span></div>
             </div>
         </div>
 
         <div class="menu-card">
-            <img src="{{ asset('images/boluu kukus pandan keju.png') }}" alt="VBolu Kukus Pandan Keju">
+            <img src="{{ asset('images/boluu kukus pandan keju.png') }}" alt="Bolu Kukus Pandan Keju">
             <div class="menu-info">
                 <h4>Bolu Kukus Pandan Keju Rp 25.000 Ukuran 15 x 10 x 5 cm</h4>
                 <p>Minimal Rp 12.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'bolu-kukus-pandan-keju 15 x 10 x 5 cm') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.9</span></div>
             </div>
         </div>
@@ -367,7 +367,7 @@
             <div class="menu-info">
                 <h4>Jahe Merah Instan Rp 13.000</h4>
                 <p>Minimal Rp 18.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'jahe-merah') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>
@@ -377,7 +377,7 @@
             <div class="menu-info">
                 <h4>Bolu Kukus Pandan Original Rp 17.000 Ukuran 15 x 10 x 5 cm</h4>
                 <p>Minimal Rp 20.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'bolu-kukus-pandan-original ukuran 15 x 10 x 5 cm') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.8</span></div>
             </div>
         </div>
@@ -387,7 +387,7 @@
             <div class="menu-info">
                 <h4>Telur Asin Rp 3.500</h4>
                 <p>Minimal Rp 15.000</p>
-                <a href="{{ route('menu.detail', 'soto-ayam') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'telur-asin') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.9</span></div>
             </div>
         </div>
