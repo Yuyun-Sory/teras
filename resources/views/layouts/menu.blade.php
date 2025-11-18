@@ -402,7 +402,7 @@
 <section class="location-section">
     <div class="location-content">
         <div class="location-left">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Teras Bu Rini">
+            <img src="{{ asset('images/bg teras.png') }}" alt="Logo Teras Bu Rini">
             <p>
                 Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai kebutuhan konsumsi,
                 mulai dari menu harian hingga acara seperti rapat, seminar, dan workshop. Kami menghadirkan hidangan lezat, bergizi,

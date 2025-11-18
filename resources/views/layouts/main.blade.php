@@ -48,7 +48,7 @@
             background-color: #fff;
             padding: 10px 50px;
             display: flex;
-            justify-content: flex-start; /* pindah ke kiri */
+            justify-content: flex-start;
             align-items: center;
             border-bottom: 2px solid #9ef7a1;
             gap: 30px;
@@ -59,10 +59,18 @@
             text-decoration: none;
             margin-right: 25px;
             font-weight: 500;
+            padding-bottom: 4px;
         }
 
         .nav-links a:hover {
             color: #46d66a;
+        }
+
+        /* ACTIVE STATE */
+        .nav-links a.active {
+            color: #2ecc71 !important;
+            font-weight: 700;
+            border-bottom: 3px solid #2ecc71;
         }
 
         .welcome-banner h1 {
@@ -100,18 +108,26 @@
             </div>
         </div>
         <div>
-            <a href="#" class="btn-auth">Masuk</a>
-            <a href="#" class="btn-auth">Daftar</a>
+            <a href="#" class="btn-auth">Login</a>
         </div>
     </div>
 
     <!-- Navbar -->
     <div class="nav-bar">
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/menu">Menu</a>
-            <a href="/cara-pesan">Cara Pesan</a>
-            <a href="/tentang">Tentang</a>
+            <a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
+
+            <a href="/menu" class="{{ request()->is('menu') || request()->is('menu/*') ? 'active' : '' }}">
+                Menu
+            </a>
+
+            <a href="/cara-pesan" class="{{ request()->is('cara-pesan') ? 'active' : '' }}">
+                Cara Pesan
+            </a>
+
+            <a href="/tentang" class="{{ request()->is('tentang') ? 'active' : '' }}">
+                Tentang
+            </a>
         </div>
     </div>
 

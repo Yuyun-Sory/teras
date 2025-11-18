@@ -1,102 +1,58 @@
 @extends('layouts.main')
-@section('title', 'cara pesan')
+@section('title', 'Cara Pesan')
 
 @section('content')
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f7f7f7;
-    }
-
-    /* === HEADER === */
-    header {
-      background-color: #90EE90; /* hijau muda */
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 30px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo span {
-      font-size: 36px;
-      font-weight: 900;
-      background-color: black;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 6px;
-    }
-
-    .logo-text {
-      font-weight: 600;
-      color: #004000;
-      line-height: 1.2;
-    }
-
-    .search-box input {
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      width: 180px;
-    }
-
-    /* === NAVBAR === */
-    nav {
-      background-color: white;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 10px 0;
-      font-weight: 600;
-      border-bottom: 1px solid #ccc;
-    }
-
-    nav a {
-      color: black;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 6px 14px;
-      border-radius: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav a.active {
-      background-color: #b2f2bb;
-    }
-
-    nav a:hover {
-      background-color: #b2f2bb;
-    }
-
-    /* === HERO SECTION === */
+<style>
     .hero {
-      background-image: url('img/carapemesanan.jpg'); /* gambar lokal */
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      height: 540px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        background-image: url('{{ asset("images/bg carapesan.png") }}');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 540px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero h1 {
-      font-size: 40px;
-      text-align: center;
-      color: #000;
-      font-weight: 500;
-      line-height: 1.4;
-      background: rgba(255, 255, 255, 0); /* transparan seperti mockup */
-      padding: 0 10px;
+        font-size: 40px;
+        text-align: center;
+        color: #000;
+        font-weight: 500;
+        line-height: 1.4;
+        background: rgba(255, 255, 255, 0);
     }
+
+    .steps {
+        padding: 40px;
+    }
+
+    .step {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .step h2 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .step span {
+        color: #2e8b57;
+    }
+
+    .step img {
+        width: 70%;
+        max-width: 500px;
+    }
+
+    .step-images img {
+        width: 300px;
+        margin: 10px;
+    }
+
+    /* Lokasi Section */
     .location-section {
         background-color: #d1fae5;
         padding: 60px 80px;
@@ -126,77 +82,50 @@
         color: #333;
         line-height: 1.7;
     }
+</style>
 
-    .social-icons a img {
-        width: 32px;
-        margin-right: 12px;
-        transition: transform 0.2s ease;
-    }
-
-    .social-icons a img:hover {
-        transform: scale(1.1);
-    }
-
-    .location-right {
-        flex: 1;
-        min-width: 320px;
-    }
-
-    footer {
-        text-align: center;
-        font-size: 14px;
-        color: #333;
-        margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
     <h1>
       Cara Melakukan Order di Teras Bu Rini<br>
       Catering Homemade
     </h1>
-  </section>
+</section>
 
+<!-- LANGKAH -->
 <section class="steps">
     <div class="step">
       <h2>1. Langkah Pertama – <span>Pemesanan Melalui Chatbot</span></h2>
-      <img src="img/carapesan1.png" alt="Cara Pesan Pertama Pemesanan Chatbot">
+      <img src="{{ asset('images/carapesan1.png') }}" alt="Cara Pesan Chatbot">
     </div>
 
     <div class="step">
       <h2>2. Langkah Dua – <span>Pilih Menu Yang Diinginkan</span></h2>
-      <img src="img/carapesan2.png" alt="Cara Pesan Dua Pilih Menu">
+      <img src="{{ asset('images/carapesan2.png') }}" alt="Pilih Menu">
     </div>
-  </section>
-  <!-- Langkah 3 -->
+
     <div class="step">
       <h2>3. Langkah Tiga – <span>Tentukan Jumlah & Tanggal</span></h2>
       <div class="step-images">
-        <img src="img/carapesan3.png" alt="Cara Pesan Tiga Jumlah Tamu">
-        <img src="img/carapesan32.png" alt="Cara Pesan Tiga Pilih Tanggal">
+        <img src="{{ asset('images/carapesan3.png') }}" alt="Jumlah Tamu">
+        <img src="{{ asset('images/carapesan32.png') }}" alt="Pilih Tanggal">
       </div>
     </div>
 
-    <!-- Langkah 4 -->
     <div class="step">
       <h2>4. Langkah Empat – <span>Masukkan Data Pemesan</span></h2>
-      <img src="img/carapesan4.png" alt="Langkah Empat Data Pemesan">
+      <img src="{{ asset('images/carapesan4.png') }}" alt="Data Pemesan">
     </div>
-  </section>
-  <!-- Langkah 5 -->
+
     <div class="step">
       <h2>5. Langkah Lima – <span>Konfirmasi Pesanan</span></h2>
-      <img src="img/carapesan5.png" alt="Langkah Lima Konfirmasi Pesanan">
+      <img src="{{ asset('images/carapesan5.png') }}" alt="Konfirmasi">
     </div>
-  </section>
-</body>
-</html>
-<!-- Bagian Lokasi -->
+</section>
 <section class="location-section">
     <div class="location-content">
         <div class="location-left">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Teras Bu Rini">
+            <img src="{{ asset('images/bg teras.png') }}" alt="Logo Teras Bu Rini">
             <p>
                 Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai kebutuhan konsumsi,
                 mulai dari menu harian hingga acara seperti rapat, seminar, dan workshop. Kami menghadirkan hidangan lezat, bergizi,
@@ -223,5 +152,6 @@
                 width="100%" height="230" style="border:0; border-radius:10px;" allowfullscreen=""
                 loading="lazy"></iframe>
         </div>
-    </div>
+</div>
 @endsection
+

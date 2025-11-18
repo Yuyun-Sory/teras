@@ -150,6 +150,35 @@
             object-fit: cover;
             border-radius :30%
         }
+.location-section {
+        background-color: #d1fae5;
+        padding: 60px 80px;
+        border-radius: 20px 20px 0 0;
+        margin-top: 60px;
+    }
+
+    .location-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .location-left {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .location-left img {
+        width: 70px;
+        margin-bottom: 15px;
+    }
+
+    .location-left p {
+        color: #333;
+        line-height: 1.7;
+    }
 
 
 /* RESPONSIVE */
@@ -298,41 +327,37 @@
 </section>
 
 <!-- === BAGIAN LOKASI & FOOTER === -->
-<section class="py-5 px-4" style="background-color: #a8f5a2;">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Kiri: Logo & Deskripsi -->
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h1 style="font-size: 70px; font-weight: bold;">T</h1>
-                <p style="max-width: 420px; font-size: 15px;">
-                    Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai
-                    kebutuhan konsumsi, mulai dari menu harian hingga acara seperti rapat, seminar, dan wedding. Kami
-                    menghadirkan hidangan lezat, bergizi, dan terjangkau dengan cita rasa terbaik untuk setiap momen
-                    Anda.
-                </p>
-
-                <!-- Ikon Sosial Media (dengan tautan aktif) -->
-                <div class="mt-3 d-flex align-items-center">
-                    <a href="https://wa.me/6281234567890" target="_blank" class="me-3" title="WhatsApp">
-                        <img src="{{ asset('icons/wa.png') }}"  alt="WhatsApp" class="img-1 ">
-                    </a>
-                    <a href="https://www.instagram.com/terasburini" target="_blank" class="me-3" title="Instagram">
-                        <img src="{{ asset('icons/ig.png') }}"  alt="Instagram">
-                    </a>
-                    <a href="https://www.facebook.com/terasburini" target="_blank" title="Facebook">
-                        <img src="{{ asset('icons/fb.png') }}"  alt="Facebook">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Kanan: Lokasi & Map -->
-            <div class="col-md-6">
-                <h4 class="fw-bold">Lokasi</h4>
-                <p>📍 Garongan Kembang RT 02 RW 18 Wonokerto Turi Sleman 55551</p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.583459911582!2d110.378!3d-7.678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDAnNDIuOCJTIDExMMKwMjInNDEuOCJF!5e0!3m2!1sen!2sid!4v1630000000000"
-                    width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen=""
-                    loading="lazy"></iframe>
+<section class="location-section">
+    <div class="location-content">
+        <div class="location-left">
+            <img src="{{ asset('images/bg teras.png') }}" alt="Logo Teras Bu Rini">
+            <p>
+                Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai kebutuhan konsumsi,
+                mulai dari menu harian hingga acara seperti rapat, seminar, dan workshop. 
+                Kami menghadirkan hidangan lezat, bergizi,
+                dan terjamin dengan cita rasa terbaik untuk setiap momen Anda.
+            </p>
+            <div class="social-icons mt-3">
+                <a href="https://wa.me/6281234567890" target="_blank" title="WhatsApp">
+                    <img src="{{ asset('icons/wa.png') }}" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/terasburini" target="_blank" title="Instagram">
+                    <img src="{{ asset('icons/ig.png') }}" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/terasburini" target="_blank" title="Facebook">
+                    <img src="{{ asset('icons/fb.png') }}" alt="Facebook">
+                </a>
             </div>
         </div>
+
+        <div class="location-right">
+            <h4 class="fw-bold">Lokasi</h4>
+            <p>📍 Garongan Kembang RT 02 RW 18, Wonokerto, Turi, Sleman 55551</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.583459911582!2d110.378!3d-7.678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDAnNDIuOCJTIDExMMKwMjInNDEuOCJF!5e0!3m2!1sen!2sid!4v1630000000000"
+                width="100%" height="230" style="border:0; border-radius:10px;" allowfullscreen=""
+                loading="lazy"></iframe>
+        </div>
+</div>
 @endsection
+
