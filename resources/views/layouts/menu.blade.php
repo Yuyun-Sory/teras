@@ -18,24 +18,23 @@
         justify-content: center;
         color: #fff;
     }
-
-    .hero-section h1 {
-        .hero-section h1 {
+.hero-section h1 {
     font-size: 46px;
-    font-weight: 700;
-    color: #ffffff; /* putih */
-    padding: 10px 25px;
-    border-radius: 10px;
+    font-weight: 800;
+    color: #ffffff;
 
-    /* Efek glow super tebal */
+    /* Biar teksnya muncul jelas di atas background */
     text-shadow:
-        0 0 8px rgba(0, 0, 0, 1),
-        0 0 16px rgba(0, 0, 0, 1),
-        0 0 28px rgba(0, 0, 0, 0.95),
-        0 0 40px rgba(0, 0, 0, 0.9),
-        0 0 55px rgba(0, 0, 0, 0.85),
-        0 0 70px rgba(0, 0, 0, 0.8);
+        0 0 6px rgba(0, 0, 0, 0.9),
+        0 0 12px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(0, 0, 0, 0.7);
+
+    letter-spacing: 1.5px;
+    padding: 8px 20px;
+    border-radius: 8px;
 }
+ 
 
     }
 
