@@ -61,6 +61,14 @@
             color: #46d66a;
         }
 
+        /* ACTIVE NAVBAR */
+        .active-link {
+            color: #46d66a !important;
+            font-weight: 700;
+            border-bottom: 2px solid #46d66a;
+            padding-bottom: 3px;
+        }
+
         footer {
             background-color: #f8f8f8;
             padding: 20px;
@@ -68,7 +76,7 @@
             margin-top: 40px;
         }
 
-        /* Floating Icon dengan animasi mengangguk + membesar */
+        /* Floating Icon */
         .floating-chatbot {
             position: fixed;
             bottom: 30px;
@@ -177,19 +185,24 @@
                 <small>Catering Homemade</small>
             </div>
         </div>
+
         <div>
-            <a href="#" class="btn-auth">Masuk</a>
-            <a href="#" class="btn-auth">Daftar</a>
+            <a href="/login" class="btn-auth">Login</a>
         </div>
     </div>
 
     <!-- Navbar -->
     <div class="nav-bar">
         <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/menu">Menu</a>
-            <a href="/cara-pesan">Cara Pesan</a>
-            <a href="/tentang">Tentang</a>
+
+            <a href="/" class="{{ request()->is('/') ? 'active-link' : '' }}">Home</a>
+
+            <a href="/menu" class="{{ request()->is('menu') || request()->is('menu/*') ? 'active-link' : '' }}">Menu</a>
+
+            <a href="/cara-pesan" class="{{ request()->is('cara-pesan') ? 'active-link' : '' }}">Cara Pesan</a>
+
+            <a href="/tentang" class="{{ request()->is('tentang') ? 'active-link' : '' }}">Tentang</a>
+
         </div>
     </div>
 
@@ -230,26 +243,44 @@
 
     <!-- JAVASCRIPT -->
     <script>
-        function toggleChatbot() {
-            const popup = document.getElementById("chatbotPopup");
-            popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+    const popup = document.getElementById("chatbotPopup");
+
+    // === CEK STATUS POPUP SAAT HALAMAN DI-LOAD ===
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedState = localStorage.getItem("chatbot_open");
+
+        if (savedState === "true") {
+            popup.style.display = "flex";
         }
+    });
 
-        function sendChat() {
-            const input = document.getElementById("chatInput");
-            const chatBody = document.getElementById("chatBody");
-
-            if (input.value.trim() === "") return;
-
-            let userMsg = document.createElement("div");
-            userMsg.className = "user-message";
-            userMsg.innerText = input.value;
-            chatBody.appendChild(userMsg);
-
-            chatBody.scrollTop = chatBody.scrollHeight;
-            input.value = "";
+    // === FUNGSI BUKA/TUTUP POPUP ===
+    function toggleChatbot() {
+        if (popup.style.display === "flex") {
+            popup.style.display = "none";
+            localStorage.setItem("chatbot_open", "false");  // simpan status tertutup
+        } else {
+            popup.style.display = "flex";
+            localStorage.setItem("chatbot_open", "true");   // simpan status terbuka
         }
-    </script>
+    }
+
+    // === FUNGSI KIRIM PESAN ===
+    function sendChat() {
+        const input = document.getElementById("chatInput");
+        const chatBody = document.getElementById("chatBody");
+
+        if (input.value.trim() === "") return;
+
+        let userMsg = document.createElement("div");
+        userMsg.className = "user-message";
+        userMsg.innerText = input.value;
+        chatBody.appendChild(userMsg);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+        input.value = "";
+    }
+</script>
 
 </body>
 </html>

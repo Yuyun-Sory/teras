@@ -243,7 +243,7 @@
             <div class="menu-info">
                 <h4>Mie Goreng Telur Rp 8.000</h4>
                 <p>Minimal Rp 8.000</p>
-                <a href="{{ route('menu.detail', 'mie-goreng') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'mie-goreng-telur') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>
@@ -253,7 +253,7 @@
             <div class="menu-info">
                 <h4>Mie Rebus Telur Rp 7.000</h4>
                 <p>Minimal Rp 7.000</p>
-                <a href="{{ route('menu.detail', 'mie-rebus') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'mie-rebus-telur') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>

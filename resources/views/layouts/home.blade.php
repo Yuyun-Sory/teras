@@ -137,12 +137,21 @@
     max-width: 420px;
 }
 .welcome-banner {
-            background-color: #f2f2f2;
-            text-align: center;
-            padding: 60px 20px;
-            margin: 0;
-        }
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 60px 20px;
+}
 
+.welcome-banner h2 {
+    font-family: "Allura", cursive;
+    font-size: 55px;
+    font-weight: 400;
+    color: #2b4d2b; /* hijau gelap elegan */
+    letter-spacing: 1px;
+    font-style: italic;          /* miring bawaan */
+    transform: skewX(-10deg);    /* tambah miring biar lebih kreatif */
+    margin: 0;
+}
 
         .img-1{
             width: 20%;
