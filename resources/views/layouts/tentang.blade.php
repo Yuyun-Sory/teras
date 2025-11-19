@@ -6,7 +6,7 @@
 <style>
     .about-section {
         position: relative;
-        background-image: url('{{ asset('images/about-bg.jpg') }}');
+        background-image: url('{{ asset('images/bg tentang.png') }}');
         background-size: cover;
         background-position: center;
         height: 80vh;
@@ -207,7 +207,7 @@ resep yang tak pernah berubah — masak dengan hati, layani dengan senyum.
 <section class="location-section">
     <div class="location-content">
         <div class="location-left">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Teras Bu Rini">
+            <img src="{{ asset('images/bg teras.png') }}" alt="Logo Teras Bu Rini">
             <p>
                 Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai kebutuhan konsumsi,
                 mulai dari menu harian hingga acara seperti rapat, seminar, dan workshop. Kami menghadirkan hidangan lezat, bergizi,

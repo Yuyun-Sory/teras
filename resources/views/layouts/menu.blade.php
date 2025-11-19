@@ -242,7 +242,7 @@
             <div class="menu-info">
                 <h4>Mie Goreng Telur Rp 8.000</h4>
                 <p>Minimal Rp 8.000</p>
-                <a href="{{ route('menu.detail', 'mie-goreng') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'mie-goreng-telur') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>
@@ -252,7 +252,7 @@
             <div class="menu-info">
                 <h4>Mie Rebus Telur Rp 7.000</h4>
                 <p>Minimal Rp 7.000</p>
-                <a href="{{ route('menu.detail', 'mie-rebus') }}" class="menu-btn">Lihat</a>
+                <a href="{{ route('menu.detail', 'mie-rebus-telur') }}" class="menu-btn">Lihat</a>
                 <div class="menu-rating">⭐ <span>4.7</span></div>
             </div>
         </div>
@@ -413,7 +413,7 @@
 <section class="location-section">
     <div class="location-content">
         <div class="location-left">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo Teras Bu Rini">
+            <img src="{{ asset('images/bg teras.png') }}" alt="Logo Teras Bu Rini">
             <p>
                 Catering Teras Bu Rini adalah penyedia jasa catering di Yogyakarta yang siap memenuhi berbagai kebutuhan konsumsi,
                 mulai dari menu harian hingga acara seperti rapat, seminar, dan workshop. Kami menghadirkan hidangan lezat, bergizi,

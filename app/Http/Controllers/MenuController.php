@@ -182,6 +182,24 @@ class MenuController extends Controller
                 'deskripsi' => 'Bolu kukus lembut dengan aroma pandan alami yang khas dan rasa manis yang pas di lidah. Dibuat dari bahan pilihan tanpa pengawet, menghasilkan tekstur empuk, ringan, dan mengembang sempurna. Warna hijau pandannya menggoda selera, cocok untuk camilan keluarga, suguhan tamu, atau teman minum teh sore.',
                 'gambar' => 'images/bolu kukus original.png'
         ],
+        'mie-rebus-telur' => [
+                'nama' => 'Mie Rebus Telur',
+                'harga' => 7000,
+                'minimal' => 15,
+                'rating' => 4.7,
+                'deskripsi' => 'Mie Rebus Telur ala Teras Bu Rini dibuat dari mie pilihan dengan kuah gurih beraroma bawang putih dan rempah ringan. Disajikan dengan telur rebus setengah matang yang menambah cita rasa creamy serta taburan daun bawang segar. Cocok dinikmati kapan saja, terutama saat cuaca dingin. Porsi pas, rasa mantap, dan dijamin bikin nagih!',
+                'gambar' => 'images/mie rebus.png'
+            ],
+         'mie-goreng-telur' => [
+                'nama' => 'Mie Goreng Telur',
+                'harga' => 9000,
+                'minimal' => 15,
+                'rating' => 4.7,
+                'deskripsi' => 'Mie goreng telur ini punya cita rasa gurih dan sedikit manis yang pas. Teksturnya lembut, tidak terlalu berminyak, dan telurnya memberi aroma harum yang bikin nagih. Simpel, tapi rasanya comforting banget.',
+                'gambar' => 'images/mie goreng.png'
+            ],
+
+
         
         
         

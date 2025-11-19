@@ -185,6 +185,22 @@
     text-shadow:
         1px 1px 0 rgba(255,255,255,0.8),
         2px 2px 5px rgba(0,0,0,0.25);
+=======
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.welcome-banner h2 {
+    font-family: "Allura", cursive;
+    font-size: 55px;
+    font-weight: 400;
+    color: #2b4d2b; /* hijau gelap elegan */
+    letter-spacing: 1px;
+    font-style: italic;          /* miring bawaan */
+    transform: skewX(-10deg);    /* tambah miring biar lebih kreatif */
+    margin: 0;
+>>>>>>> 03d8e8ac095bae9d12e7bfa3627578334cd8fc9b
 }
 
         .img-1{
@@ -402,4 +418,9 @@
                 loading="lazy"></iframe>
         </div>
 </div>
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+
+>>>>>>> 03d8e8ac095bae9d12e7bfa3627578334cd8fc9b
