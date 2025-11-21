@@ -200,7 +200,6 @@
     font-style: italic;          /* miring bawaan */
     transform: skewX(-10deg);    /* tambah miring biar lebih kreatif */
     margin: 0;
->>>>>>> 03d8e8ac095bae9d12e7bfa3627578334cd8fc9b
 }
 
         .img-1{
@@ -418,9 +417,4 @@
                 loading="lazy"></iframe>
         </div>
 </div>
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
-
->>>>>>> 03d8e8ac095bae9d12e7bfa3627578334cd8fc9b

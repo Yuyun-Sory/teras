@@ -49,6 +49,25 @@
             border-bottom: 2px solid #9ef7a1;
             gap: 30px;
         }
+        /* ============================
+           NAVBAR STICKY
+        ============================ */
+        .nav-bar {
+            background-color: #fff;
+            padding: 10px 50px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #9ef7a1;
+            gap: 30px;
+
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        .sticky-shadow {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
 
         .nav-links a {
             color: #000;
@@ -100,20 +119,19 @@
 
         /* POPUP CHATBOT */
         .chatbot-popup {
-            position: fixed;
-            bottom: 120px;
-            right: 30px;
-            width: 320px;
-            height: 430px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.2);
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 10000;
-        }
-
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    width: 380px;      /* Lebar diperbesar */
+    height: 520px;     /* Tinggi diperbesar */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10000;
+}
         .chatbot-header {
             background: #9ef7a1;
             padding: 12px 15px;
@@ -245,42 +263,118 @@
     <script>
     const popup = document.getElementById("chatbotPopup");
 
-    // === CEK STATUS POPUP SAAT HALAMAN DI-LOAD ===
+    /* ===============================
+       FUNGSI SIMPAN & LOAD HISTORI CHAT
+       =============================== */
+
+    function saveChatHistory() {
+        const chatBody = document.getElementById("chatBody");
+        localStorage.setItem("chat_history", chatBody.innerHTML);
+    }
+
+    function loadChatHistory() {
+        const saved = localStorage.getItem("chat_history");
+        if (saved) {
+            document.getElementById("chatBody").innerHTML = saved;
+        }
+    }
+
+    /* ===============================
+       LOAD SAAT HALAMAN DIBUKA
+       =============================== */
     document.addEventListener("DOMContentLoaded", () => {
         const savedState = localStorage.getItem("chatbot_open");
 
         if (savedState === "true") {
             popup.style.display = "flex";
         }
+
+        loadChatHistory(); // <-- histori chat diload di sini
     });
 
-    // === FUNGSI BUKA/TUTUP POPUP ===
+    /* ===============================
+       BUKA / TUTUP POPUP
+       =============================== */
     function toggleChatbot() {
-        if (popup.style.display === "flex") {
-            popup.style.display = "none";
-            localStorage.setItem("chatbot_open", "false");  // simpan status tertutup
-        } else {
-            popup.style.display = "flex";
-            localStorage.setItem("chatbot_open", "true");   // simpan status terbuka
-        }
-    }
+    const chatBody = document.getElementById("chatBody");
 
-    // === FUNGSI KIRIM PESAN ===
+    if (popup.style.display === "flex") {
+
+        // Jika ditutup
+        popup.style.display = "none";
+        localStorage.setItem("chatbot_open", "false");
+
+        // ❌ Hapus histori chat
+        localStorage.removeItem("chat_history");
+
+        // ❌ Reset tampilan chat ke default
+        chatBody.innerHTML = `
+            <div class="bot-message">
+                Halo! Ada yang bisa saya bantu? 😊<br>
+                • Menu<br>
+                • Harga catering<br>
+                • Cara pesan<br>
+                • Lokasi
+            </div>
+        `;
+
+    } else {
+
+        // Jika dibuka
+        popup.style.display = "flex";
+        localStorage.setItem("chatbot_open", "true");
+
+        // Reset default
+        chatBody.innerHTML = `
+            <div class="bot-message">
+                Halo! Ada yang bisa saya bantu? 😊<br>
+                • Menu<br>
+                • Harga catering<br>
+                • Cara pesan<br>
+                • Lokasi
+            </div>
+        `;
+    }
+}
+
+    /* ===============================
+       FUNGSI KIRIM PESAN
+       =============================== */
     function sendChat() {
         const input = document.getElementById("chatInput");
         const chatBody = document.getElementById("chatBody");
 
         if (input.value.trim() === "") return;
 
+        // Tambahkan pesan user
         let userMsg = document.createElement("div");
         userMsg.className = "user-message";
         userMsg.innerText = input.value;
         chatBody.appendChild(userMsg);
 
         chatBody.scrollTop = chatBody.scrollHeight;
+
+        // SIMPAN HISTORY
+        saveChatHistory();
+
         input.value = "";
     }
+
+    window.addEventListener("scroll", function () {
+
+    const headerTop = document.querySelector(".header-top");
+    const navBar = document.querySelector(".nav-bar");
+
+    if (window.scrollY > 10) {
+        headerTop.classList.add("sticky-shadow");
+        navBar.classList.add("sticky-shadow");
+    } else {
+        headerTop.classList.remove("sticky-shadow");
+        navBar.classList.remove("sticky-shadow");
+    }
+});
 </script>
+
 
 </body>
 </html>
